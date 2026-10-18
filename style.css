@@ -1,0 +1,37 @@
+:root{--bg:#fbf6f6;--ink:#2b1a24;--mut:#7d6a74;--line:#ecdde0;--acc:#b4546c;--onacc:#fff;--sf:#fff;--ph:#eddfe2}
+@media (prefers-color-scheme:dark){:root{--bg:#181015;--ink:#f3e8ec;--mut:#b29ca7;--line:#33232b;--acc:#e08ba1;--onacc:#2a1019;--sf:#22161d;--ph:#33232b}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg) radial-gradient(60% 420px at 85% 0,color-mix(in srgb,var(--acc) 13%,transparent),transparent) no-repeat;color:var(--ink);font:400 1rem/1.5 'DM Sans',system-ui,sans-serif}
+.hero{max-width:1280px;margin:0 auto;padding:64px 20px 44px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+h1{font:italic 600 clamp(3rem,9vw,6rem)/.95 'Cormorant Garamond',Georgia,serif;letter-spacing:-.01em;margin:0}
+.hero p{color:var(--mut);max-width:46ch;margin:18px 0 0;font-size:1.08rem}
+.strip{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.strip img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:999px 999px 14px 14px;background:var(--ph);animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+.strip img:nth-child(even){transform:translateY(28px)}
+.strip img:nth-child(2){animation-delay:.08s}.strip img:nth-child(3){animation-delay:.16s}.strip img:nth-child(4){animation-delay:.24s}.strip img:nth-child(5){animation-delay:.32s}
+@keyframes rise{from{opacity:0;margin-top:30px}to{opacity:1;margin-top:0}}
+main{max-width:1280px;margin:0 auto;padding:10px 14px 40px}
+.wall{display:flex;gap:12px;align-items:flex-start}
+.col{flex:1;min-width:0;display:flex;flex-direction:column;gap:12px}
+.ph{position:relative;margin:0;border-radius:12px;overflow:hidden;background:var(--ph);cursor:zoom-in}
+.ph img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.ph:hover img{transform:scale(1.04)}
+.ph figcaption{position:absolute;inset:auto 0 0 0;display:flex;justify-content:space-between;align-items:end;gap:8px;padding:30px 10px 9px 12px;background:linear-gradient(transparent,rgba(30,10,20,.7));color:#fff;font-size:.88rem;opacity:0;transition:opacity .2s}
+.ph:hover figcaption,.ph:focus-within figcaption{opacity:1}
+@media (hover:none){.ph figcaption{opacity:1;padding-top:22px;justify-content:flex-end}.ph figcaption span{display:none}}
+.dl{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:#fff;color:#111;flex:none}
+.dl:hover{background:var(--acc);color:var(--onacc)}
+a:focus-visible,button:focus-visible,.ph:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.note{background:var(--sf);border:1px dashed var(--acc);border-radius:12px;padding:12px 16px;margin:0 0 18px;font-size:.92rem}
+.empty{text-align:center;color:var(--mut);padding:60px 0}
+footer{text-align:center;padding:8px 20px 110px;font:italic 500 1.35rem 'Cormorant Garamond',Georgia,serif;color:var(--mut)}
+.fab{position:fixed;right:20px;bottom:20px;z-index:8;display:flex;gap:8px;align-items:center;padding:13px 20px;border:0;border-radius:99px;background:var(--acc);color:var(--onacc);font:600 .98rem 'DM Sans',sans-serif;box-shadow:0 8px 24px color-mix(in srgb,var(--acc) 40%,transparent);cursor:pointer}
+.toast{position:fixed;left:50%;bottom:84px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:12px;font-size:.92rem;z-index:30;display:none;max-width:90vw;text-align:center}
+.lb{position:fixed;inset:0;background:rgba(14,6,10,.94);display:none;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:16px;z-index:20}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:78vh;border-radius:8px;object-fit:contain}
+.row{display:flex;gap:10px;align-items:center;color:#fff;flex-wrap:wrap;justify-content:center}
+.row button,.row a{border:0;border-radius:10px;padding:9px 15px;background:#ffffff1f;color:#fff;font:600 .95rem 'DM Sans',sans-serif;cursor:pointer;text-decoration:none}
+.row a{background:var(--acc);color:var(--onacc)}
+@media (max-width:760px){.hero{grid-template-columns:1fr;padding-top:40px}.strip{grid-template-columns:repeat(3,1fr)}.strip img:nth-child(n+4){display:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
