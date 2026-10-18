@@ -1,7 +1,7 @@
 /* ===== PENGATURAN ===== */
-const JUDUL = "Galeri Foto";
-const DESKRIPSI = "Potongan-potongan momen yang ingin kusimpan, kukumpulkan di sini untukmu.";
-const PENUTUP = "Dibuat dengan sayang.";   // kosongkan "" jika tidak ingin ada kalimat penutup
+const JUDUL = "jemsi's gallery";
+const DESKRIPSI = "a long year ago, dibuat agar hpnya tidak meledug.";
+const PENUTUP = "";   // kosongkan "" jika tidak ingin ada kalimat penutup
 
 /* ===== UNGGAH FOTO OLEH PENGUNJUNG (Cloudinary) =====
    Isi kedua baris ini setelah membuat akun gratis di cloudinary.com:
