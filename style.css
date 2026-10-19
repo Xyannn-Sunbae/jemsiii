@@ -35,3 +35,8 @@ footer{text-align:center;padding:8px 20px 110px;font:italic 500 1.35rem 'Cormora
 .row a{background:var(--acc);color:var(--onacc)}
 @media (max-width:760px){.hero{grid-template-columns:1fr;padding-top:40px}.strip{grid-template-columns:repeat(3,1fr)}.strip img:nth-child(n+4){display:none}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* tombol hapus */
+.acts{display:flex;gap:8px;flex:none}
+.del{display:grid;place-items:center;width:36px;height:36px;border:0;border-radius:50%;background:#fff;color:#b3261e;cursor:pointer;flex:none}
+.del:hover{background:#b3261e;color:#fff}
+.row #lbDel{background:#b3261e}
