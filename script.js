@@ -8,7 +8,7 @@ const PENUTUP = "";   // kosongkan "" jika tidak ingin ada kalimat penutup
    - CLOUD_NAME   : nama cloud di Dashboard
    - UPLOAD_PRESET: nama upload preset (mode Unsigned) yang kamu buat
    Kosongkan keduanya jika tidak ingin ada fitur unggah. */
-const CLOUD_NAME = "Xyannn";
+const CLOUD_NAME = "gqrcyl44";
 const UPLOAD_PRESET = "jemsss";
 const TAG = "galeri";
 /* ====================== */
